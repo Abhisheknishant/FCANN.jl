@@ -16,7 +16,6 @@ matrix:
   allow_failures:
     - julia: nightly
     - arch: x86
-    - arch: arm64
 
   include:
   # linux builds
@@ -24,7 +23,17 @@ matrix:
       os: linux
       dist: xenial
       julia: 1
+    - env: CUDA=8.0
+      os: linux
+      arch: arm64
+      dist: xenial
+      julia: 1
     - env: CUDA=9.0
+      os: linux
+      dist: xenialz
+      julia: 1
+    - env: CUDA=9.0
+      arch: arm64
       os: linux
       dist: xenialz
       julia: 1
@@ -32,11 +41,26 @@ matrix:
       os: linux
       dist: xenial
       julia: 1
+    - env: CUDA=9.1
+      arch: arm64
+      os: linux
+      dist: xenial
+      julia: 1
     - env: CUDA=9.2
       os: linux
       dist: xenial
       julia: 1
+    - env: CUDA=9.2
+      arch: arm64
+      os: linux
+      dist: xenial
+      julia: 1
     - env: CUDA=10.0
+      os: linux
+      dist: xenial
+      julia: 1
+    - env: CUDA=10.0
+      arch: arm64
       os: linux
       dist: xenial
       julia: 1
